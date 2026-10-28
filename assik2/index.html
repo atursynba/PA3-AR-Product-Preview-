@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>PA2 - ID 243121</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; font-family: monospace; }
+    canvas { width: 100vw; height: 100vh; display: block; }
+    #status {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.75);
+      color: #00ff00;
+      padding: 10px 14px;
+      font-size: 14px;
+      border-radius: 4px;
+      pointer-events: none;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="c"></canvas>
+  <div id="status">Loading...</div>
+
+  <!-- Обязательное подключение glMatrix 2.8.1 перед index.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PA3 – AR Hit-Testing – 243121</title>
+  <style>
+    body { margin: 0; overflow: hidden; font-family: monospace; background: #000; color: #fff; }
+    #header { position: absolute; top: 10px; left: 10px; z-index: 10; background: rgba(0,0,0,0.8); padding: 10px; border-radius: 8px; }
+    #overlay { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 10; display: flex; gap: 10px; align-items: center; }
+    button { padding: 12px 24px; font-size: 16px; background: #007bff; color: white; border: none; border-radius: 8px; cursor: pointer; }
+    button#clear { background: #dc3545; }
+    #status { position: absolute; top: 80px; left: 10px; z-index: 10; background: rgba(0,0,0,0.8); padding: 8px 12px; border-radius: 6px; font-size: 14px; }
+    #fallback { color: #ff6b6b; font-weight: bold; }
+  </style>
+  <!-- Импорт-мап для строго фиксированной версии Three.js 0.186.1 -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="header">
+    <h2 style="margin:0 0 5px 0; font-size:16px;">AR Product Preview (ID: 243121)</h2>
+    <div id="fallback"></div>
+  </div>
+
+  <div id="status">Status: Initializing...</div>
+
+  <div id="overlay">
+    <button id="start-btn" style="display:none;">START AR</button>
+    <button id="clear" style="display:none;">Clear</button>
+  </div>
+
+  <script type="module" src="index.js"></script>
+</body>
+</html>
